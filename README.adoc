@@ -11,7 +11,11 @@ experimental: Try the code inside your browser with -> http://beta.codenvy.com/f
 :icons: font
 :source-highlighter: prettify
 
+This repository is a copy from the tutorial at https://spring.io/guides/gs/rest-service/
+
 This guide walks you through the process of creating a "hello world" link:/understanding/REST[RESTful web service] with Spring.
+
+Additionally, it has the `loremipsum` endpoint that returns the Lorem Ipsum text. To get bigger or smaller text, pass the `len` parameter with the number of characters to return.
 
 == What you'll build
 
@@ -39,6 +43,23 @@ The `name` parameter value overrides the default value of "World" and is reflect
 [source,json]
 ----
 {"id":1,"content":"Hello, User!"}
+----
+
+Lorem Ipsum endpoint
+
+----
+http://localhost:8080/loremipsum
+----
+
+[source,json]
+----
+{"id":1,"content":"Lorem Ipsum dolor ..."}
+----
+
+With `len` parameter
+
+----
+http://localhost:8080/loremipsum?len=1311
 ----
 
 
